@@ -1,19 +1,15 @@
 import React from 'react';
-import ItemCard from './components/ItemCard';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
-import data from './data/data.json'
+import Routes from './routes';
+import NavBar from './components/NavBar';
 
 const App = () => {
 	return(
-		<div className="cards-section">
-			{data.map((item, index) => {
-				return <ItemCard
-					key={index}
-					name={item.name}
-					description={item.description}
-				/>
-			})}
-		</div>
+		<Router>
+			<NavBar />
+			<Routes />
+		</Router>
 	)
 }
 
