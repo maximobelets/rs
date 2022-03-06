@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const Login = () => {
 	const [email, setEmail] = useState();
 	const [password, setPassword] = useState();
-	console.log(`${email} - email, ${password} - password`);
 
 	return (
 		<section>
